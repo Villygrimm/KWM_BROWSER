@@ -22,6 +22,8 @@
 
    ![изображение](https://github.com/Villygrimm/KWM_BROWSER/assets/78722395/8750a2a5-c6e8-4c45-9ec4-c72a81ffdd9a)
 
+P.S. по какой то неведомой причине через visual studio code запускать не получается, но запускается через exe :) 
+
 
 
 
