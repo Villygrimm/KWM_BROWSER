@@ -27,6 +27,7 @@ namespace KWM_BROWSER
             chromiumWebBrowser1.Load("https://doxbin.com/");
             richTextBox1.Text = File.ReadAllText("history.t$");
             File.AppendAllText("history.t$", "google: "+ textBox1.Text + "\n");
+            chromiumWebBrowser1.FrameLoadEnd += chromiumWebBrowser1_FrameLoadEnd;
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -101,7 +102,7 @@ namespace KWM_BROWSER
 
         private void textBox1_TextChanged_1(object sender, EventArgs e)
         {
-
+           
         }
 
         private void button3_Click_2(object sender, EventArgs e)
@@ -151,10 +152,6 @@ namespace KWM_BROWSER
             searchsystem = "https://yandex.ru/search/?text=";
         }
 
-        private void button7_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -168,5 +165,26 @@ namespace KWM_BROWSER
                 button1_Click_1(sender, e);
             }
         }
+
+        private void panel1_Paint_2(object sender, PaintEventArgs e)
+        {
+
+        }
+
+
+
+
+        private void chromiumWebBrowser1_FrameLoadEnd(object sender, FrameLoadEndEventArgs e)
+        {
+            if (e.Frame.IsMain)
+            {
+                textBox1.Text = e.Url;
+            }
+        }
+
+
+
+
+
     }
 }
