@@ -5,7 +5,7 @@
 
 
 ## Чо нужно для запуска
-- [Visual Studio Code](https://www.gatsbyjs.com/](https://visualstudio.microsoft.com/ru/vs/community/)) я пользуюсь версией 2022, коммунити эдишн
+- [Visual Studio](https://www.gatsbyjs.com/](https://visualstudio.microsoft.com/ru/vs/community/)) я пользуюсь версией 2022, коммунити эдишн
 - Какая то поебота для работы всего этого (жмаете просто галочку когда устанавливаете шедевропрогу)
   ![изображение](https://github.com/Villygrimm/KWM_BROWSER/assets/78722395/d8aadda7-d10a-4fe9-9580-1cc0f95790f2)
 
@@ -22,7 +22,7 @@
 
    ![изображение](https://github.com/Villygrimm/KWM_BROWSER/assets/78722395/8750a2a5-c6e8-4c45-9ec4-c72a81ffdd9a)
 
-P.S. по какой то неведомой причине через visual studio code запускать не получается, но запускается через exe :) 
+P.S. по какой то неведомой причине через visual studio запускать не получается, но запускается через exe :) 
 
 
 
