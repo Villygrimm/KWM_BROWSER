@@ -27,8 +27,6 @@ namespace KWM_BROWSER
             textBox1.KeyDown += textBox1_KeyDown;
             searchsystem = "https://www.google.com/search?q=";
             chromiumWebBrowser1.Load("https://doxbin.com/");
-            richTextBox1.Text = File.ReadAllText("history.t$");
-            File.AppendAllText("history.t$", "google: "+ textBox1.Text + "\n");
             chromiumWebBrowser1.FrameLoadEnd += chromiumWebBrowser1_FrameLoadEnd;
         }
 
@@ -78,8 +76,7 @@ namespace KWM_BROWSER
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            File.WriteAllText("history.t$", "");
-            richTextBox1.Text = File.ReadAllText("history.t$");
+        
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -93,8 +90,7 @@ namespace KWM_BROWSER
             {
                 chromiumWebBrowser1.Load(textBox1.Text);
             }
-            File.AppendAllText("history.t$", "google:" + textBox1.Text + "\n");
-            richTextBox1.Text = File.ReadAllText("history.t$");
+      
         }
 
         private void chromiumWebBrowser1_LoadingStateChanged_1(object sender, LoadingStateChangedEventArgs e)
@@ -134,14 +130,7 @@ namespace KWM_BROWSER
 
         private void button6_Click(object sender, EventArgs e)
         {
-            if (tabControl1.Visible == true)
-            {
-                tabControl1.Visible = false;
-            }
-        else if (tabControl1.Visible == false)
-            {
-                tabControl1.Visible = true;
-            }
+  
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
