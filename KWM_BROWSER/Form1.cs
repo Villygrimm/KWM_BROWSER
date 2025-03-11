@@ -18,10 +18,12 @@ namespace KWM_BROWSER
 {
     public partial class Form1 : Form
     {
+        
         string searchsystem;
         public Form1()
         {
             InitializeComponent();
+            chromiumWebBrowser1.AddressChanged += ChromiumWebBrowser1_AddressChanged;
             textBox1.KeyDown += textBox1_KeyDown;
             searchsystem = "https://www.google.com/search?q=";
             chromiumWebBrowser1.Load("https://doxbin.com/");
@@ -176,10 +178,15 @@ namespace KWM_BROWSER
 
         private void chromiumWebBrowser1_FrameLoadEnd(object sender, FrameLoadEndEventArgs e)
         {
-            if (e.Frame.IsMain)
+         
+        }
+        private void ChromiumWebBrowser1_AddressChanged(object sender, AddressChangedEventArgs e)
+        {
+            // Так как это срабатывает в другом потоке, используем Invoke
+            this.Invoke(new MethodInvoker(() =>
             {
-                textBox1.Text = e.Url;
-            }
+                textBox1.Text = e.Address;
+            }));
         }
 
 

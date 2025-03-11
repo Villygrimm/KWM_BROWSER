@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CefSharp;
+using CefSharp.WinForms;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +18,13 @@ namespace KWM_BROWSER
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            var settings = new CefSettings();
+            settings.CefCommandLineArgs.Add("webrtc-ip-handling-policy", "disable_non_proxied_udp");
+
+            Cef.Initialize(settings);
+
             Application.Run(new Form1());
+        
         }
     }
 }
